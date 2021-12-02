@@ -16,7 +16,7 @@ export const Container = styled.div`
         }
 
         td {
-            padding: 1rem 2rem;
+            padding: 1rem 2rem 2rem;
             border: 0;
             background: var(--shape);
             color: var(--text-body);
@@ -25,11 +25,6 @@ export const Container = styled.div`
             &:first-child {
             color: var(--text-title);
             }
-        }
-
-        tbody {
-            align-items: center;
-            text-align: left;
         }
     }
 `;

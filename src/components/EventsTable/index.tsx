@@ -5,6 +5,7 @@ import { Container } from "./styles";
 
 
 interface IEvent {
+    id: string;
     nomeevento: string;
     local: string;
     diasemana: string;
@@ -18,6 +19,12 @@ export function EventTable() {
         api.get('events')
         .then(response => setEvents(response.data))
     }, [])
+
+    async function deleteEvento(id: string) {
+        await api.delete<IEvent>(`/events/${id}`);
+
+
+    }
     
     return(
         <Container>
@@ -41,6 +48,9 @@ export function EventTable() {
                             <td>{event.local}</td>
                             <td>{event.diasemana}</td>
                             <td>{event.horario}</td>
+                            <td>
+                                <button onClick={() => deleteEvento(event.id)}>Deletar evento</button>
+                            </td>
                         </tr>
                         </tbody>
                         

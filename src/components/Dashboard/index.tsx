@@ -1,7 +1,7 @@
 import React from 'react';
 import { Summary } from '../Summary';
 import { EventTable } from '../EventsTable';
-import { Container } from './styles';
+import { Container, Backbox } from './styles';
 
 
 export function Dashboard() {
