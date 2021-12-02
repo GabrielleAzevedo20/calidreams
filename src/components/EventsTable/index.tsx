@@ -33,7 +33,6 @@ export function EventTable() {
             <table>
                 <thead>
                     <tr>
-                        
                         <th>Evento</th>
                         <th>Local</th>
                         <th>Dia da Semana</th>
