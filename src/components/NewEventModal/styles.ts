@@ -37,7 +37,6 @@ export const Container = styled.form`
         padding: 0 1.5rem;
         height: 4rem;
         margin-top: 1.5rem;
-        background: var(--green);
         color: #DC143C;
         border: 0;
         font-size: 1rem;
