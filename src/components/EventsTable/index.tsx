@@ -41,6 +41,7 @@ export function EventTable() {
                         <th> Horário </th>
                         <th> Like </th>
                         <th> Dislike </th>
+                        <th>Deletar Evento</th>
                         </ul>
                     </tr>
                 </thead>
@@ -64,7 +65,7 @@ export function EventTable() {
                             </td>
 
                             <td>
-                                  <button onClick={(async () => {
+                                <button onClick={(async () => {
                                     await api.post(`/events/dislike/${event.id}`)
                                     api.get('/events').then( d => {setEvents(d.data)})
                                     })}>Dislike <FaThumbsDown /> </button>
