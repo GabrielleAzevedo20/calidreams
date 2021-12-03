@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-
+import { FaThumbsUp, FaThumbsDown } from 'react-icons/fa';
+import { BsTrash2Fill } from 'react-icons/bs';
 import api from "../../services/api";
 import { Container } from "./styles";
 
@@ -33,12 +34,14 @@ export function EventTable() {
             <table>
                 <thead>
                     <tr>
-                        <th>Evento</th>
-                        <th>Local</th>
-                        <th>Dia da Semana</th>
-                        <th>Horário</th>
-                        <th>Like</th>
-                        <td>Dislike</td>
+                        <ul>
+                        <th> Evento </th>
+                        <th> Local </th>
+                        <th> Dia da Semana </th>
+                        <th> Horário </th>
+                        <th> Like </th>
+                        <th> Dislike </th>
+                        </ul>
                     </tr>
                 </thead>
 
@@ -54,16 +57,22 @@ export function EventTable() {
                             <td>{event.like}</td>
                             <td>{event.dislike}</td>
                             <td>
-                                <button onClick={() => deleteEvento(event.id)}>Deletar evento</button>
                                 <button onClick={(async () => {
                                     await api.post(`/events/like/${event.id}`)
-                                    api.get('/events').then( l => {setEvents(l.data)})})}>Like</button>
-                                    
-                                    
-                                <button onClick={(async () => {
+                                    api.get('/events').then( l => {setEvents(l.data)})})}
+                                    >Like <FaThumbsUp /> </button>
+                            </td>
+
+                            <td>
+                                  <button onClick={(async () => {
                                     await api.post(`/events/dislike/${event.id}`)
                                     api.get('/events').then( d => {setEvents(d.data)})
-                        })}>Dislike</button>
+                                    })}>Dislike <FaThumbsDown /> </button>
+                            </td>
+
+                            <td>
+                                <button onClick={() => deleteEvento(event.id)}
+                                >Deletar evento <BsTrash2Fill /> </button>
                             </td>
                         </tr>
                         </tbody>

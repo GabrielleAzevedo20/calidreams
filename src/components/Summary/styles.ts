@@ -15,6 +15,7 @@ export const Container = styled.div`
             display: flex;
             align-items: center;
             justify-content: space-between;
+            color: #484C7F;
         }
 
         strong {
@@ -22,11 +23,12 @@ export const Container = styled.div`
             font-size: 2rem;
             font-weight: 500;
             line-height: 3rem;
+            color: #484C7F;
         }
 
         &.highlight-background {
             background: var(--shape);
-            color: #000000;
+            color: #484C7F;
         }
     }
 `;

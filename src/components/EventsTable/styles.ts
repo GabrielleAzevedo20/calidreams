@@ -7,6 +7,10 @@ export const Container = styled.div`
         width: 100%;
         border-spacing: 0 0.5rem;
 
+        ul {
+            text-align: center;
+            align-items: center;
+        
         th {
             color: var(--text-body);
             font-weight: 400;
@@ -14,6 +18,9 @@ export const Container = styled.div`
             text-align: left;
             line-height: 1.5rem;
         }
+        }
+
+        
 
         td {
             padding: 1rem 2rem 2rem;
@@ -21,6 +28,10 @@ export const Container = styled.div`
             background: var(--shape);
             color: var(--text-body);
             border-radius: 0.25rem;
+
+            button {
+                
+            }
 
             &:first-child {
             color: var(--text-title);
