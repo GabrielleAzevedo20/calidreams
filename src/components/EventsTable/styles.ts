@@ -30,7 +30,8 @@ export const Container = styled.div`
             border-radius: 0.25rem;
 
             button {
-                
+                color: #DC143C;
+                background: #FFE6EB
             }
 
             &:first-child {
